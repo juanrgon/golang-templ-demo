@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eou pipefail
+
 # Install air if not already installed
 echo "Ensuring air is installed..."
 if ! command -v air &> /dev/null
