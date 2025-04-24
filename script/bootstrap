@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Install air if not already installed
+echo "Ensuring air is installed..."
+if ! command -v air &> /dev/null
+then
+    echo "air could not be found, installing..."
+    go install github.com/air-verse/air@latest
+    echo "✅ air installed"
+else
+    echo "✅ air is already installed"
+fi
+
+# install go dependencies
+echo
+echo "Installing go dependencies..."
+go mod tidy
+go mod verify
+echo "✅ Go dependencies installed"
