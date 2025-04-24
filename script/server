@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "Starting server..."
+
+echo "TIP: Use the 'air' command to run the server in development mode with autoreload."
+
+# Build the server binary
+script/build
+
+# Run the server binary
+./tmp/server

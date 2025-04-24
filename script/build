@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euxo pipefail
+
+# Generate templ components
+templ generate
+
+# Build the server binary
+go build -o tmp/server .
